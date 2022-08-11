@@ -1,0 +1,5 @@
+// this file makes it so that when we upload something to github, it will not upload the files that are stated in this archive
+
+.env
+node_modules
+.encryptedKey.json

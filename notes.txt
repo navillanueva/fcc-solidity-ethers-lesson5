@@ -1,0 +1,57 @@
+Node.js: will allow us to use javascript as a backend language
+
+Javascript: is a web runned code (google, firefox, etc) but can be used for backend with node.js
+
+¿What is an async function?
+
+    The word “async” before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically. 
+    So, async ensures that the function returns a promise, and wraps non-promises in it
+
+    Synchronous: solidity is a synchronous programming language
+    Asynchronous: javascript is this, meaning several coding functions can execute at the same time
+
+    Cooking example: [explained in cooking.js]
+
+        Synchronous cooking:
+        1. Put popcorn in the microwave     ==> returns a Promise 
+        2. Wait for popcorn to finish
+        3. Pour drinks for everyone
+
+        Asynchronous cooking:
+        1. Put popcorn in the microwave
+        2. Pour drinks for everyone
+        3. Wait for popcorn to finish
+
+    A Promise can have 3 strates:
+        -Pending
+        -Fullfilled
+        -Rejected
+
+YARN PACKAGE MANAGER: 
+    
+    This is the tool we are going to use to install and manage all of our packages
+    "yarn" command is both used to install dependencies and can be used to run scripts. Command to compile our contract is:
+
+        [COMPILE COMMAND] --->  yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . SimpleStorage.sol
+
+    --base-path . -o .  ==> this means that the directory is the one we want(using the ".") and the "-o" means that we want to open it
+
+    If we go to package.json we can add that the word compile encapsulates this command and this way we dont have to write it out each time
+    Warning: this will only work if we are executing  the command "compile" from within the same directory as package.json is in
+
+GANACHE TOOL:
+
+    Similar to a EVM in remix. Its a fake blockchain that we can run locally to test and run code before going to the mainnet
+
+ETHERS.js
+
+    One of the most popular javascript based tooling kits that allows us to interact with different blockchains and it has
+    wrappers and makes API calls. Ethers is the main tool that powers the hardhat environment 
+
+    Web3.js is also a very popular tool.
+
+¿WHAT IS VERIFYING AND PUBLISHING YOUR CODE?
+
+    Inside etherscan we can access this option and be able to publish our contract so that people that search our contract address can se the source code
+
+    
